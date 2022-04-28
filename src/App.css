@@ -96,3 +96,103 @@ header > div {
   width: 25%;
   justify-content: end;
 }
+/* DiaryList */
+
+.DiaryList .menu-wrapper {
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.DiaryList .menu-wrapper .right-col {
+  flex-grow: 1;
+}
+
+.DiaryList .menu-wrapper .right-col button {
+  width: 100%;
+}
+
+.DiaryList .ControlMenu {
+  margin-right: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ececec;
+
+  padding: 15px 20px;
+  cursor: pointer;
+
+  font-family: "Gowun Dodum", sans-serif;
+  font-size: 16px;
+}
+/* DiaryItem */
+
+.DiaryItem {
+  padding: 15px 0px;
+  border-bottom: 1px solid rgba(100, 100, 111, 0.2);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.DiaryItem .emotion-img-wrapper {
+  cursor: pointer;
+
+  min-width: 120px;
+  height: 80px;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.DiaryItem .emotion-img-wrapper--1 {
+  background-color: #fd565f;
+}
+
+.DiaryItem .emotion-img-wrapper--2 {
+  background-color: #fd8446;
+}
+
+.DiaryItem .emotion-img-wrapper--3 {
+  background-color: #fdce17;
+}
+
+.DiaryItem .emotion-img-wrapper--4 {
+  background-color: #9dd772;
+}
+
+.DiaryItem .emotion-img-wrapper--5 {
+  background-color: #64c964;
+}
+
+.DiaryItem .emotion-img-wrapper img {
+  width: 66%;
+}
+
+.DiaryItem .info-wrapper {
+  flex-grow: 1;
+  margin-left: 20px;
+
+  cursor: pointer;
+}
+
+.DiaryItem .diary-date {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.DiaryItem .diary-content-preview {
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.DiaryItem .btn-wrapper {
+  display: flex;
+  align-items: center;
+
+  min-width: 70px;
+}
