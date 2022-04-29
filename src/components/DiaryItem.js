@@ -1,17 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import MyButton from "./MyButton";
-
 const DiaryItem = ({ date, emotion, id, content }) => {
   const navigate = useNavigate();
-
   const strDate = new Date(parseInt(date)).toLocaleDateString();
-
   const goDetail = () => {
     navigate(`/diary/${id}`);
   };
 
   const goEdit = () => {
-    navigate(`/edit`);
+    navigate(`/edit/${id}`);
   };
 
   return (
@@ -35,5 +32,4 @@ const DiaryItem = ({ date, emotion, id, content }) => {
     </div>
   );
 };
-
 export default DiaryItem;
