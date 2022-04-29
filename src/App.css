@@ -223,6 +223,25 @@ header > div {
 .DiaryEditor .emotion-list-wrapper {
   display: flex;
 }
+.DiaryEditor textarea {
+  font-family: "Yeon Sung", cursive;
+  font-size: 18px;
+
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 200px;
+  resize: vertical;
+  padding: 15px;
+
+  border: none;
+  border-radius: 10px;
+  background-color: #ececec;
+}
+.DiaryEditor .control-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* EmotionItem */
 
