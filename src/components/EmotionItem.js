@@ -9,7 +9,7 @@ const EmotionItem = ({
     <div
       className={[
         "EmotionItem",
-        isSelected ? `EmotionItem-on-${emotion_id}` : `EmotionItem-off`,
+        isSelected ? `EmotionItem-on--${emotion_id}` : `EmotionItem-off`,
       ].join(" ")}
       onClick={() => onClick(emotion_id)}
     >
