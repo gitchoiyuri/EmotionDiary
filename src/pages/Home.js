@@ -39,10 +39,6 @@ const Home = () => {
     }
   }, [diaryList, currentDate]);
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
-
   const increaseMonth = () => {
     setCurrentDate(
       new Date(
