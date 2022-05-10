@@ -6,6 +6,7 @@ import DiaryEditor from "../components/DiaryEditor";
 const Edit = () => {
   const [originData, setOriginData] = useState();
   const diaryList = useContext(DiaryStateContext);
+
   const navigate = useNavigate();
   const { id } = useParams();
 
@@ -14,10 +15,12 @@ const Edit = () => {
       const targetDiary = diaryList.find(
         (it) => parseInt(it.id) === parseInt(id)
       );
+
       if (targetDiary) {
         setOriginData(targetDiary);
       } else {
         alert("존재하지 않는 일기입니다.");
+
         navigate("/", { replace: true });
       }
     }
@@ -29,4 +32,5 @@ const Edit = () => {
     </div>
   );
 };
+
 export default Edit;

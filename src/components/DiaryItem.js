@@ -1,13 +1,16 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
+
 import { useNavigate } from "react-router-dom";
 import { DiaryDispatchContext } from "../App";
+
 import MyButton from "./MyButton";
+
 const DiaryItem = ({ date, emotion, id, content }) => {
   const navigate = useNavigate();
-
   const { onRemove } = useContext(DiaryDispatchContext);
 
   const strDate = new Date(parseInt(date)).toLocaleDateString();
+
   const goDetail = () => {
     navigate(`/diary/${id}`);
   };
@@ -44,4 +47,5 @@ const DiaryItem = ({ date, emotion, id, content }) => {
     </div>
   );
 };
-export default DiaryItem;
+
+export default React.memo(DiaryItem);

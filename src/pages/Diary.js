@@ -6,7 +6,6 @@ import MyHeader from "../components/MyHeader";
 
 import { getStringDate } from "../util/date";
 import { emotionList } from "../util/emotionList";
-
 const Diary = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -79,4 +78,5 @@ const Diary = () => {
     );
   }
 };
+
 export default Diary;

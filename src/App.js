@@ -1,7 +1,7 @@
-import "./App.css";
-
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React, { useEffect, useReducer, useRef } from "react";
+
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Edit from "./pages/Edit";
@@ -31,18 +31,18 @@ const reducer = (state, action) => {
     default:
       return state;
   }
-
   localStorage.setItem("diary", JSON.stringify(newState));
 
   return newState;
 };
+
 export const DiaryStateContext = React.createContext();
 export const DiaryDispatchContext = React.createContext();
 
 const App = () => {
   useEffect(() => {
     const localData = localStorage.getItem("diary");
-    if (localData.length === "[]") {
+    if (localData.length > 2) {
       const diaryList = JSON.parse(localData).sort(
         (a, b) => parseInt(b.id) - parseInt(a.id)
       );
@@ -53,7 +53,6 @@ const App = () => {
   }, []);
 
   const [data, dispatch] = useReducer(reducer, []);
-
   const dataId = useRef(0);
 
   const onCreate = (date, content, emotion) => {
@@ -68,9 +67,11 @@ const App = () => {
     });
     dataId.current += 1;
   };
+
   const onRemove = (targetId) => {
     dispatch({ type: "REMOVE", targetId });
   };
+
   const onEdit = (targetId, date, content, emotion) => {
     dispatch({
       type: "EDIT",
@@ -82,6 +83,7 @@ const App = () => {
       },
     });
   };
+
   return (
     <DiaryStateContext.Provider value={data}>
       <DiaryDispatchContext.Provider value={{ onCreate, onEdit, onRemove }}>
@@ -99,4 +101,5 @@ const App = () => {
     </DiaryStateContext.Provider>
   );
 };
+
 export default App;

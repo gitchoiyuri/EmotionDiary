@@ -6,7 +6,8 @@ body {
   align-items: center;
 
   font-family: "Yeon Sung", cursive;
-  font-family: "Jua", sans-serif;
+  font-family: "Gowun Dodum", sans-serif;
+
   min-height: 100vh;
   margin: 0px;
 }
@@ -27,14 +28,11 @@ body {
   background-color: white;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-
 .App {
-  padding: 20px;
   min-height: 100vh;
   padding: 0px 20px;
-  font-family: "Yeon Sung", cursive;
-  font-family: "Gowun Dodum", sans-serif;
 }
+
 /* MyButton */
 
 .MyButton {
@@ -96,6 +94,7 @@ header > div {
   width: 25%;
   justify-content: end;
 }
+
 /* DiaryList */
 
 .DiaryList .menu-wrapper {
@@ -124,9 +123,10 @@ header > div {
   padding: 15px 20px;
   cursor: pointer;
 
-  font-family: "Gowun Dodum", sans-serif;
+  font-family: "Jua", sans-serif;
   font-size: 16px;
 }
+
 /* DiaryItem */
 
 .DiaryItem {
@@ -214,7 +214,7 @@ header > div {
   border-radius: 8px;
   background-color: #ececec;
   padding: 10px 20px;
-  font-family: "Jua", sans-serif;
+  font-family: "Gowun Dodum", sans-serif;
   font-size: 15px;
 
   cursor: pointer;
@@ -223,8 +223,9 @@ header > div {
 .DiaryEditor .emotion-list-wrapper {
   display: flex;
 }
+
 .DiaryEditor textarea {
-  font-family: "Yeon Sung", cursive;
+  font-family: "Gowun Dodum", cursive;
   font-size: 18px;
 
   box-sizing: border-box;
@@ -237,12 +238,12 @@ header > div {
   border-radius: 10px;
   background-color: #ececec;
 }
+
 .DiaryEditor .control-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 /* EmotionItem */
 
 .EmotionItem {
@@ -296,6 +297,7 @@ header > div {
   background-color: #64c964;
   color: white;
 }
+
 /* Diary */
 
 .DiaryPage {
